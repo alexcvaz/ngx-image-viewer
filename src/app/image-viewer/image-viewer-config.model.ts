@@ -1,5 +1,6 @@
 export interface ImageViewerConfig {
     btnClass?: string;
+    icnClass?: string;
     zoomFactor?: number;
     containerBackgroundColor?: string;
     wheelZoom?: boolean;

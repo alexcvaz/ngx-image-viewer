@@ -8,33 +8,33 @@
   </div>
 
   <button [class]="config.btnClass" *ngIf="config.btnShow.rotateCounterClockwise" (click)="rotateCounterClockwise()">
-    <span [class]="config.btnIcons.rotateCounterClockwise"></span>
+    <i [class]="config.icnClass" [innerHtml]="config.btnIcons.rotateCounterClockwise"></i>
   </button>
   <button [class]="config.btnClass" *ngIf="config.btnShow.rotateClockwise" (click)="rotateClockwise()">
-    <span [class]="config.btnIcons.rotateClockwise"></span>
+    <i [class]="config.icnClass" [innerHtml]="config.btnIcons.rotateClockwise"></i>
   </button>
 
   <button [class]="config.btnClass" *ngIf="config.btnShow.zoomOut" (click)="zoomOut()">
-    <span [class]="config.btnIcons.zoomOut"></span>
+    <i [class]="config.icnClass" [innerHtml]="config.btnIcons.zoomOut"></i>
   </button>
   <button [class]="config.btnClass" *ngIf="config.btnShow.zoomIn" (click)="zoomIn()">
-    <span [class]="config.btnIcons.zoomIn"></span>
+    <i [class]="config.icnClass" [innerHtml]="config.btnIcons.zoomIn"></i>
   </button>
 
   <button [class]="config.btnClass" *ngFor="let cBtn of config.customBtns" (click)="fireCustomEvent(cBtn.name, index)">
-    <span [class]="cBtn.icon"></span>
+    <i [class]="cBtn.icon"></i>
   </button>
 
   <button id="ngx-fs-btn" [class]="config.btnClass" (click)="toggleFullscreen()" *ngIf="config.allowFullscreen">
-    <span [class]="config.btnIcons.fullscreen"></span>
+    <i [class]="config.icnClass" [innerHtml]="config.btnIcons.fullscreen"></i>
   </button>
 
   <div class="nav-button-container" *ngIf="src.length > 1">
     <button [class]="config.btnClass" (click)="prevImage()" [disabled]="index === 0">
-      <span [class]="config.btnIcons.prev"></span>
+      <i [class]="config.icnClass" [innerHtml]="config.btnIcons.prev"></i>
     </button>
     <button [class]="config.btnClass" (click)="nextImage()" [disabled]="index === src.length - 1">
-      <span [class]="config.btnIcons.next"></span>
+      <i [class]="config.icnClass" [innerHtml]="config.btnIcons.next"></i>
     </button>
   </div>
 </div>
